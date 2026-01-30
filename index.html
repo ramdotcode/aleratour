@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alera Tour - Ibadah Nyaman, Hati Tenang</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b", // Gold accent
+                        "primary-dark": "#d4a722",
+                        "sage": "#8A9A5B", // Sage Green
+                        "sage-light": "#E8ECE2",
+                        "background-light": "#FCFBF8", // Off-white
+                        "background-cream": "#F4F1EA", // Warm cream for hero/sections
+                        "background-dark": "#221d10",
+                        "text-main": "#1b180d",
+                        "text-muted": "#5C5848",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                    backgroundImage: {
+                        'geometric-pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231b180d' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+                    },
+                    container: {
+                        center: true,
+                        padding: {
+                            DEFAULT: '1rem',
+                            sm: '2rem',
+                            lg: '4rem',
+                            xl: '5rem',
+                            '2xl': '8.75rem', // ~140px
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Hide scrollbar for clean horizontal scroll */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased overflow-x-hidden selection:bg-primary/30">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-[#f3f0e7] dark:border-white/10">
+<div class="container mx-auto">
+<div class="flex items-center justify-between h-20">
+<!-- Logo -->
+<div class="flex items-center gap-3 text-text-main dark:text-white">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">mosque</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Alera Tour</h2>
+</div>
+<!-- Desktop Menu -->
+<div class="hidden lg:flex items-center gap-10">
+<a class="nav-link text-text-main dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#beranda">Beranda</a>
+<a class="nav-link text-text-main dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#kenapa-kami">Kenapa Kami</a>
+<a class="nav-link text-text-main dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#paket">Paket</a>
+<a class="nav-link text-text-main dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#itinerary">Itinerary</a>
+<a class="nav-link text-text-main dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#testimoni">Testimoni</a>
+<a class="nav-link text-text-main dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#faq">FAQ</a>
+</div>
+<!-- CTA -->
+<div class="hidden sm:flex">
+<button class="bg-primary hover:bg-primary-dark transition-colors text-[#1b180d] px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide">
+                        Konsultasi Sekarang
+                    </button>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="lg:hidden text-text-main dark:text-white">
+<span class="material-symbols-outlined cursor-pointer">menu</span>
+</div>
+</div>
+</div>
+</nav>
+<!-- Hero Section: Split Screen -->
+<header id="beranda" class="relative w-full min-h-[calc(100vh-80px)] flex flex-col lg:flex-row">
+<!-- Left Content -->
+<div class="w-full lg:w-1/2 bg-background-cream dark:bg-zinc-900 flex flex-col justify-center px-6 md:px-12 lg:pl-[140px] lg:pr-16 py-16 order-2 lg:order-1">
+<div class="max-w-xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-white/10 border border-sage/20 mb-8" data-aos="fade-down" data-aos-duration="1000">
+<span class="w-2 h-2 rounded-full bg-sage animate-pulse"></span>
+<span class="text-xs font-semibold uppercase tracking-wider text-sage dark:text-sage-light">Musim Premium 2024</span>
+</div>
+<h1 class="font-display font-light text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-text-main dark:text-white mb-6" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    Ibadah Nyaman,<br/>
+<span class="font-serif italic text-sage dark:text-sage-light">Hati Tenang</span>
+</h1>
+<p class="text-lg text-text-muted dark:text-gray-300 leading-relaxed mb-10 max-w-md" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                    Mulailah perjalanan spiritual yang dirancang untuk ketenangan pikiran. Kami mengurus detail duniawi agar hati Anda bisa fokus sepenuhnya pada ibadah.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+<button class="bg-primary hover:bg-primary-dark text-[#1b180d] h-12 px-8 rounded-lg text-sm font-bold tracking-wide transition-all transform hover:scale-105">
+                        Lihat Paket
+                    </button>
+<button class="group flex items-center justify-center gap-2 h-12 px-6 rounded-lg text-text-main dark:text-white text-sm font-semibold border border-gray-300 dark:border-gray-600 hover:border-primary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">play_circle</span>
+                        Lihat Perjalanan
+                    </button>
+</div>
+</div>
+</div>
+<!-- Right Image -->
+<div class="w-full lg:w-1/2 h-[50vh] lg:h-auto relative order-1 lg:order-2 overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="Serene vertical view of the green dome of Masjid Nabawi under a clear blue sky" style="background-image: url('hero.jpeg');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent lg:hidden"></div>
+<!-- Floating Caption for Mobile -->
+<div class="absolute bottom-6 left-6 lg:hidden text-white">
+<p class="text-sm font-medium opacity-90 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                    Madinah, Saudi Arabia
+                </p>
+</div>
+</div>
+</header>
+<!-- Why Choose Us: Feature Section -->
+<section id="kenapa-kami" class="py-20 lg:py-32 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto">
+<div class="relative bg-background-cream dark:bg-zinc-800 rounded-2xl overflow-hidden p-8 lg:p-16">
+<!-- Background Pattern -->
+<div class="absolute inset-0 opacity-10 bg-geometric-pattern pointer-events-none"></div>
+<div class="relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+<div>
+<h2 class="text-3xl lg:text-4xl font-display font-light text-text-main dark:text-white mb-6" data-aos="fade-right">
+                            Mengapa Memilih <span class="font-bold">Alera Tour?</span>
+</h2>
+<p class="text-text-muted dark:text-gray-300 leading-relaxed mb-8" data-aos="fade-right" data-aos-delay="200">
+                            Kami percaya bahwa perjalanan ke Tanah Suci harus setenang destinasi itu sendiri. Perencanaan matang kami memastikan fokus Anda tetap sepenuhnya pada ibadah.
+                        </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="300">
+<div class="w-12 h-12 rounded-full bg-white dark:bg-white/10 flex items-center justify-center shrink-0 text-primary shadow-sm">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-text-main dark:text-white">Penyedia Visa Resmi</h3>
+<p class="text-sm text-text-muted dark:text-gray-400 mt-1">Proses lancar dengan akses langsung resmi ke sistem Kementerian.</p>
+</div>
+</div>
+<div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="400">
+<div class="w-12 h-12 rounded-full bg-white dark:bg-white/10 flex items-center justify-center shrink-0 text-primary shadow-sm">
+<span class="material-symbols-outlined">school</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-text-main dark:text-white">Muthawif Bersertifikat</h3>
+<p class="text-sm text-text-muted dark:text-gray-400 mt-1">Dibimbing oleh pembimbing berpengalaman dari Universitas Islam Madinah.</p>
+</div>
+</div>
+<div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="500">
+<div class="w-12 h-12 rounded-full bg-white dark:bg-white/10 flex items-center justify-center shrink-0 text-primary shadow-sm">
+<span class="material-symbols-outlined">directions_bus</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-text-main dark:text-white">Transportasi Mewah</h3>
+<p class="text-sm text-text-muted dark:text-gray-400 mt-1">Bepergian dengan nyaman dengan armada premium bus GMC dan Mercedes kami.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative h-full min-h-[400px]">
+<div class="absolute inset-0 bg-cover bg-center rounded-xl shadow-xl" data-alt="Pilgrim reading Quran in a peaceful corner of the mosque" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGgxgI2YuKEsOa-iZTVggicik_yOkSV9RpmoF6va1uoyiA3iHLBdcUwmfhSWRplP1zt33Xn_dII5kh8bwIwn5PzfElPlpiZqIYQx0He_mxyckIWinJ-B-LAiOjwOGwHw-4XHmwEqYM2dRD_GidKQdEV7bW6cN-SaD-4VpXdhnFBaf6cL8eK_LW4_AL8nY0gvrNGbgcX4xZDusIvrsKWmqHrAx_RrLlpj2t3msjXg-NkNXpRMX7rkLMrG_NdLGjFmsy6kBh6Z-y');">
+</div>
+<!-- Decorative Card Overlay -->
+<div class="absolute -bottom-6 -left-6 bg-white dark:bg-zinc-700 p-6 rounded-lg shadow-lg max-w-[200px] hidden md:block">
+<p class="text-4xl font-serif text-primary mb-1">4.9</p>
+<p class="text-xs text-text-muted dark:text-gray-300 font-medium">Rating Rata-rata dari lebih dari 5.000+ Jemaah</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Packages Section -->
+<section id="paket" class="py-20 bg-white dark:bg-zinc-900">
+<div class="container mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 px-2">
+<div>
+<span class="text-sage font-bold tracking-wider text-xs uppercase mb-2 block">Perjalanan Pilihan</span>
+<h2 class="text-3xl lg:text-4xl font-display font-semibold text-text-main dark:text-white">Paket Umrah Eksklusif</h2>
+</div>
+<a class="hidden md:flex items-center gap-1 text-sm font-bold text-text-main dark:text-white hover:text-primary transition-colors mt-4 md:mt-0" href="#">
+                    Lihat Semua Paket <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Package Card 1 -->
+<div class="group flex flex-col bg-background-light dark:bg-zinc-800 rounded-xl overflow-hidden border border-gray-100 dark:border-white/5 hover:shadow-xl transition-all duration-300" data-aos="fade-up">
+<div class="relative aspect-[4/3] overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="View of Kaaba from a high vantage point during sunset" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATfeYhf4YukqX1x-kcjuBKlUJuScDkAuLP_oNNJoSfrD3G47ZTDcbvLFMUw-4O_0_KqE-DfWOgqTgbEsD2H82Zn32TDDi56CPW5DNwAhrXUd_Yt8TBugw0TlCYtDUYltqeBStSY7Hdvg3dHHdIP7HE70iFjq2doP0Tzkx6CTF2lea9uLPI6R1I-2JNeVdf4l4Iji5gO7mVi_1lhnddj-Z2S63L7amNfa-YzSTgAgxBsjEqky74zBz1G4Lui22phcp8Q6R4RaDS');">
+</div>
+<div class="absolute top-4 left-4">
+<span class="inline-block px-3 py-1 bg-sage/90 backdrop-blur-sm text-white text-xs font-bold rounded-full tracking-wide">
+                                RAMADAN 2024
+                            </span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Royal Ramadan</h3>
+<p class="text-sm text-text-muted dark:text-gray-400 mt-1">10 Hari Terakhir • Program Itikaf</p>
+</div>
+<div class="text-right">
+<p class="text-xs text-text-muted dark:text-gray-400">Mulai dari</p>
+<p class="text-lg font-bold text-text-main dark:text-white">Rp 50jt</p>
+</div>
+</div>
+<hr class="border-gray-100 dark:border-white/10 my-4"/>
+<div class="flex gap-4 mt-auto">
+<div class="flex items-center gap-1 text-xs text-text-muted dark:text-gray-400">
+<span class="material-symbols-outlined text-[16px]">bed</span> Hotel Bintang 5
+                            </div>
+<div class="flex items-center gap-1 text-xs text-text-muted dark:text-gray-400">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span> 12 Hari
+                            </div>
+</div>
+</div>
+</div>
+<!-- Package Card 2 -->
+<div class="group flex flex-col bg-background-light dark:bg-zinc-800 rounded-xl overflow-hidden border border-gray-100 dark:border-white/5 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+<div class="relative aspect-[4/3] overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Interior of a luxury hotel room in Makkah with view of the Clock Tower" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBi1fAMYtwyb8HzvU3GQ7gTSF_dAe_wb2VV1EMOkPjLaGISfPNFfaxFyKkQJZJ5gBsPL5NKJEQos3O_C_qMC7BLT9znjK0EnbjtQN2xWjJIIAjU7LdUfry1uU1KY3M_eNW2-Of05NToJDHNwqGvV9GPlAl0B26TByJQyPWn3wAplI1cKGCU2EwpEL0LWrKvY1h0l1XAJBtggR6_m4O44YPk9BO8IvyWfWqOboLTIPXwr336vNFZ1XQ3aLsmkFsk-SCk7wjLAeHq');">
+</div>
+<div class="absolute top-4 left-4">
+<span class="inline-block px-3 py-1 bg-primary/90 backdrop-blur-sm text-[#1b180d] text-xs font-bold rounded-full tracking-wide">
+                                VIP EXECUTIVE
+                            </span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Executive Comfort</h3>
+<p class="text-sm text-text-muted dark:text-gray-400 mt-1">Penerbangan Langsung • Transfer Privat</p>
+</div>
+<div class="text-right">
+<p class="text-xs text-text-muted dark:text-gray-400">Mulai dari</p>
+<p class="text-lg font-bold text-text-main dark:text-white">Rp 45jt</p>
+</div>
+</div>
+<hr class="border-gray-100 dark:border-white/10 my-4"/>
+<div class="flex gap-4 mt-auto">
+<div class="flex items-center gap-1 text-xs text-text-muted dark:text-gray-400">
+<span class="material-symbols-outlined text-[16px]">bed</span> View Clock Tower
+                            </div>
+<div class="flex items-center gap-1 text-xs text-text-muted dark:text-gray-400">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span> 9 Hari
+                            </div>
+</div>
+</div>
+</div>
+<!-- Package Card 3 -->
+<div class="group flex flex-col bg-background-light dark:bg-zinc-800 rounded-xl overflow-hidden border border-gray-100 dark:border-white/5 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+<div class="relative aspect-[4/3] overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Family walking together in the courtyard of Masjid Nabawi" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA08b2uMqDe-mNT9Pph8RsI5UxHrqfaTUBesaZOVaHnsGKaiRPzf12FLeAGhekc-YzuO6YnZbZ_R_RIk-ISSH0cSvfcPaSqnVYkkk_B-gOTomDFEXBB5atGykMMVXMIdpdpX0SCCOvV8cWhq7BMXrVVJDVyWm9dm8I5cLfhksExxZk9FW1C5aUsDyD1lUfC6bIj5kbOG4DMTAzJsZo4WGMqtUOr0sVEt4E4t__3_h3KPR5Ysc08nU9hAkxUZQeyB9JAPyRxpwvK');">
+</div>
+<div class="absolute top-4 left-4">
+<span class="inline-block px-3 py-1 bg-white/90 backdrop-blur-sm text-text-main text-xs font-bold rounded-full tracking-wide">
+                                FAMILY SAVER
+                            </span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Family Barakah</h3>
+<p class="text-sm text-text-muted dark:text-gray-400 mt-1">Quad Sharing • Ramah Anak</p>
+</div>
+<div class="text-right">
+<p class="text-xs text-text-muted dark:text-gray-400">Mulai dari</p>
+<p class="text-lg font-bold text-text-main dark:text-white">Rp 30jt</p>
+</div>
+</div>
+<hr class="border-gray-100 dark:border-white/10 my-4"/>
+<div class="flex gap-4 mt-auto">
+<div class="flex items-center gap-1 text-xs text-text-muted dark:text-gray-400">
+<span class="material-symbols-outlined text-[16px]">bed</span> Hotel Bintang 4
+                            </div>
+<div class="flex items-center gap-1 text-xs text-text-muted dark:text-gray-400">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span> 10 Hari
+                            </div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center md:hidden">
+<a class="inline-flex items-center gap-1 text-sm font-bold text-text-main dark:text-white hover:text-primary transition-colors" href="#">
+                    View All Packages <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Interactive Itinerary Section -->
+<section id="itinerary" class="py-20 bg-background-light dark:bg-background-dark overflow-hidden">
+<div class="container mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-sage font-bold tracking-wider text-xs uppercase mb-2 block">Perjalanan</span>
+<h2 class="text-3xl lg:text-4xl font-display font-semibold text-text-main dark:text-white">Langkah Anda Menuju Ketenangan</h2>
+</div>
+<!-- Horizontal Scroll Timeline -->
+<div class="relative px-4">
+<!-- Line -->
+<div class="absolute top-[45px] left-0 w-full h-[2px] bg-gray-200 dark:bg-white/10 hidden lg:block z-0"></div>
+<div class="flex lg:grid lg:grid-cols-4 gap-8 overflow-x-auto no-scrollbar pb-8 snap-x">
+<!-- Step 1 -->
+<div class="snap-center shrink-0 w-[280px] lg:w-auto relative z-10 flex flex-col lg:items-center text-left lg:text-center group">
+<div class="w-[90px] h-[90px] rounded-full bg-background-cream dark:bg-zinc-800 border-4 border-white dark:border-zinc-900 flex items-center justify-center mb-6 shadow-sm group-hover:border-sage transition-colors">
+<span class="material-symbols-outlined text-3xl text-sage">flight_takeoff</span>
+</div>
+<h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Keberangkatan</h3>
+<p class="text-sm text-text-muted dark:text-gray-400 leading-relaxed">
+                            Berangkat dari Jakarta dengan penerbangan langsung Saudi Airlines. Temu sapa dengan tim kami di Soekarno-Hatta.
+                        </p>
+</div>
+<!-- Step 2 -->
+<div class="snap-center shrink-0 w-[280px] lg:w-auto relative z-10 flex flex-col lg:items-center text-left lg:text-center group">
+<div class="w-[90px] h-[90px] rounded-full bg-background-cream dark:bg-zinc-800 border-4 border-white dark:border-zinc-900 flex items-center justify-center mb-6 shadow-sm group-hover:border-sage transition-colors">
+<span class="material-symbols-outlined text-3xl text-sage">mosque</span>
+</div>
+<h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Ziarah Madinah</h3>
+<p class="text-sm text-text-muted dark:text-gray-400 leading-relaxed">
+                            4 hari di Madinah. Kunjungan Raudhah, Masjid Quba, dan terhubung dengan sejarah Nabi MUHAMMAD (SAW).
+                        </p>
+</div>
+<!-- Step 3 -->
+<div class="snap-center shrink-0 w-[280px] lg:w-auto relative z-10 flex flex-col lg:items-center text-left lg:text-center group">
+<div class="w-[90px] h-[90px] rounded-full bg-background-cream dark:bg-zinc-800 border-4 border-white dark:border-zinc-900 flex items-center justify-center mb-6 shadow-sm group-hover:border-sage transition-colors">
+<span class="material-symbols-outlined text-3xl text-sage">star</span>
+</div>
+<h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Umrah Makkah</h3>
+<p class="text-sm text-text-muted dark:text-gray-400 leading-relaxed">
+                            Melaksanakan Ibadah Umrah dibimbing oleh Muthawif. 5 hari ibadah di Masjidil Haram dengan hotel yang sangat dekat.
+                        </p>
+</div>
+<!-- Step 4 -->
+<div class="snap-center shrink-0 w-[280px] lg:w-auto relative z-10 flex flex-col lg:items-center text-left lg:text-center group">
+<div class="w-[90px] h-[90px] rounded-full bg-background-cream dark:bg-zinc-800 border-4 border-white dark:border-zinc-900 flex items-center justify-center mb-6 shadow-sm group-hover:border-sage transition-colors">
+<span class="material-symbols-outlined text-3xl text-sage">flight_land</span>
+</div>
+<h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Kepulangan</h3>
+<p class="text-sm text-text-muted dark:text-gray-400 leading-relaxed">
+                            Kembali ke tanah air dengan hati yang bersih dan kenangan abadi. Termasuk hadiah air Zamzam.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Mobile Progress Dots -->
+<div class="flex lg:hidden justify-center gap-2 mt-8">
+<div class="w-3 h-1.5 rounded-full bg-primary transition-colors"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-white/20"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-white/20"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-white/20"></div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section id="testimoni" class="py-24 bg-background-cream dark:bg-zinc-800 relative overflow-hidden">
+<!-- Abstract Decoration -->
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-sage/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-20 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="container mx-auto px-6 text-center relative z-10">
+<span class="material-symbols-outlined text-5xl text-primary/40 mb-8">format_quote</span>
+<blockquote class="max-w-4xl mx-auto mb-10">
+<p class="font-serif italic text-3xl md:text-4xl lg:text-5xl leading-tight text-text-main dark:text-white">
+                    "Perjalanan paling damai dalam hidup saya. Setiap detail ditangani dengan sangat hati-hati sehingga saya benar-benar bisa lepas dari dunia dan terhubung dengan Sang Pencipta."
+                </p>
+</blockquote>
+<div class="flex flex-col items-center gap-2">
+<div class="w-16 h-16 rounded-full bg-cover bg-center border-2 border-white dark:border-zinc-700 shadow-md" data-alt="Portrait of a smiling pilgrim" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCGHJDcs1K7DE6__tzVLfh6tuhOjWeMk4QaQeDpowdoNH0WSJJ8EtjwIjFuTWqJ8OLrhUpKy8fFhA5PIiFZoThzq2B5d867r07OhCsKiviigqOxhXW-YWpi9sC4WwSfPt9KKJF4JVoMp3yY1aMJcm4R1GhA9cwL-kaDKk0IZbZr_BgRNAvV3lXdWlcrSCNbEMmv_8Zs0HL6w3_mbDiuKvzYsrZ7qwphXPlHmtuiPqgAaNJ_kgPgAQWcBivCdYAIQbKIZry6gbCg');">
+</div>
+<div>
+<h4 class="font-bold text-lg text-text-main dark:text-white">Haji Ahmed Santoso</h4>
+<p class="text-sm text-sage font-medium uppercase tracking-wide">Umrah VIP, Feb 2024</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ & CTA Section -->
+<section id="faq" class="py-20 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto max-w-4xl">
+<!-- FAQ Header -->
+<div class="text-center mb-12">
+<h2 class="text-2xl md:text-3xl font-display font-semibold text-text-main dark:text-white">Pertanyaan Umum</h2>
+</div>
+<!-- FAQ Grid -->
+<div class="space-y-4 mb-20">
+<div class="border-b border-gray-200 dark:border-white/10 pb-4">
+<details class="group">
+<summary class="flex justify-between items-center cursor-pointer list-none py-2">
+<span class="font-medium text-lg text-text-main dark:text-white">Apa saja dokumen yang diperlukan untuk visa Umrah?</span>
+<span class="transition group-open:rotate-180">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<p class="text-text-muted dark:text-gray-400 mt-2 leading-relaxed">
+                            Kami memerlukan paspor yang valid setidaknya 6 bulan, foto berwarna terbaru dengan latar belakang putih, dan bukti vaksinasi Meningitis. Tim kami akan menangani sisanya.
+                        </p>
+</details>
+</div>
+<div class="border-b border-gray-200 dark:border-white/10 pb-4">
+<details class="group">
+<summary class="flex justify-between items-center cursor-pointer list-none py-2">
+<span class="font-medium text-lg text-text-main dark:text-white">Bisakah saya menyesuaikan paket saya?</span>
+<span class="transition group-open:rotate-180">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<p class="text-text-muted dark:text-gray-400 mt-2 leading-relaxed">
+                            Tentu saja. Paket VIP dan Privat kami memungkinkan Anda untuk memilih tanggal perjalanan, hotel pilihan, dan tur Ziarah tambahan yang sesuai dengan kebutuhan Anda.
+                        </p>
+</details>
+</div>
+<div class="border-b border-gray-200 dark:border-white/10 pb-4">
+<details class="group">
+<summary class="flex justify-between items-center cursor-pointer list-none py-2">
+<span class="font-medium text-lg text-text-main dark:text-white">Apakah asuransi perjalanan sudah termasuk?</span>
+<span class="transition group-open:rotate-180">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<p class="text-text-muted dark:text-gray-400 mt-2 leading-relaxed">
+                            Ya, semua paket komprehensif kami mencakup asuransi perjalanan wajib Arab Saudi yang mencakup keadaan darurat medis dan perawatan terkait COVID-19.
+                        </p>
+</details>
+</section>
+<!-- Final CTA Card Section -->
+<section class="pb-24 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto">
+<div class="bg-text-main dark:bg-zinc-800 rounded-3xl p-12 md:p-20 text-center relative overflow-hidden" data-aos="zoom-in">
+<!-- Background Pattern overlay -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 20px 20px;"></div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-5xl lg:text-6xl font-display font-light text-white mb-6">Mulai Perjalanan Suci Anda</h2>
+<p class="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">Kursi terbatas tersedia untuk musim Ramadan mendatang. Jadwalkan konsultasi dengan ahli kami hari ini untuk pengalaman ibadah yang tenang dan bermakna.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-primary hover:bg-primary-dark text-[#1b180d] px-10 py-4 rounded-xl text-lg font-bold tracking-wide transition-all shadow-xl hover:shadow-primary/30 transform hover:-translate-y-1">
+                            Konsultasi Sekarang
+                        </button>
+<button class="bg-transparent border border-gray-600 hover:border-white text-white px-10 py-4 rounded-xl text-lg font-semibold transition-all hover:bg-white/5">
+                            Unduh Brosur
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark border-t border-[#f3f0e7] dark:border-white/10 pt-16 pb-8">
+<div class="container mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-text-main dark:text-white mb-6">
+<span class="material-symbols-outlined text-3xl text-primary">mosque</span>
+<span class="text-xl font-bold">Alera Tour</span>
+</div>
+<p class="text-sm text-text-muted dark:text-gray-400 mb-6">
+                        PT. Alera Tour Indonesia<br/>
+                        Penyedia Umrah Resmi<br/>
+                        Izin No. 123/2023
+                    </p>
+<div class="flex gap-4">
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 dark:bg-white/10 text-text-main dark:text-white hover:bg-primary transition-colors" href="#">
+<span class="font-bold text-xs">IG</span>
+</a>
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 dark:bg-white/10 text-text-main dark:text-white hover:bg-primary transition-colors" href="#">
+<span class="font-bold text-xs">FB</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-text-main dark:text-white mb-4">Paket</h4>
+<ul class="space-y-2 text-sm text-text-muted dark:text-gray-400">
+<li><a class="hover:text-primary" href="#">Spesial Ramadan</a></li>
+<li><a class="hover:text-primary" href="#">VIP Eksklusif</a></li>
+<li><a class="hover:text-primary" href="#">Hemat Keluarga</a></li>
+<li><a class="hover:text-primary" href="#">Grup Privat</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-text-main dark:text-white mb-4">Perusahaan</h4>
+<ul class="space-y-2 text-sm text-text-muted dark:text-gray-400">
+<li><a class="hover:text-primary" href="#">Tentang Kami</a></li>
+<li><a class="hover:text-primary" href="#">Tim Kami</a></li>
+<li><a class="hover:text-primary" href="#">Blog / Artikel</a></li>
+<li><a class="hover:text-primary" href="#">Kontak</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-text-main dark:text-white mb-4">Newsletter</h4>
+<p class="text-xs text-text-muted dark:text-gray-400 mb-4">Dapatkan update paket terbaru dan tips perjalanan.</p>
+<div class="flex">
+<input class="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-l-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-primary" placeholder="Alamat Email" type="email"/>
+<button class="bg-primary hover:bg-primary-dark text-[#1b180d] px-4 py-2 rounded-r-lg">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-200 dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-text-muted dark:text-gray-500">© 2024 Alera Tour. All rights reserved.</p>
+<div class="flex gap-6 text-xs text-text-muted dark:text-gray-500">
+<a class="hover:text-primary" href="#">Kebijakan Privasi</a>
+<a class="hover:text-primary" href="#">Ketentuan Layanan</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+    });
+
+    // Active Link Highlight on Scroll
+    const sections = document.querySelectorAll('header[id], section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+        let current = "";
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - 150) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach((link) => {
+            link.classList.remove("text-primary", "font-bold");
+            if (link.getAttribute("href") === `#${current}`) {
+                link.classList.add("text-primary", "font-bold");
+            }
+        });
+    });
+
+    // Smooth Scroll for Navigation
+    navLinks.forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+</body></html>
