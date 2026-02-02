@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
+<html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Alera Tour - Ibadah Nyaman, Hati Tenang</title>
@@ -45,6 +45,14 @@
                     },
                 },
             },
+        }
+    </script>
+<script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
         }
     </script>
 <style>
@@ -92,13 +100,19 @@
 <a class="nav-link text-text-main dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#testimoni">Testimoni</a>
 <a class="nav-link text-text-main dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#faq">FAQ</a>
 </div>
-<!-- CTA -->
-<a href="https://wa.me/6281234567890?text=Assalamu'alaikum%20Alera%20Tour,%20saya%20ingin%20konsultasi%20mengenai%20paket%20umrah." target="_blank" class="bg-primary hover:bg-primary-dark transition-colors text-[#1b180d] px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide inline-flex items-center justify-center">
-                        Konsultasi Sekarang
-                    </a>
+<!-- Theme Toggle & CTA -->
+<div class="flex items-center gap-4">
+    <button id="theme-toggle" class="p-2 rounded-lg text-text-main dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-300">
+        <span id="theme-toggle-dark-icon" class="material-symbols-outlined hidden">dark_mode</span>
+        <span id="theme-toggle-light-icon" class="material-symbols-outlined hidden">light_mode</span>
+    </button>
+    <a href="https://wa.me/6281234567890?text=Assalamu'alaikum%20Alera%20Tour,%20saya%20ingin%20konsultasi%20mengenai%20paket%20umrah." target="_blank" class="hidden sm:inline-flex bg-primary hover:bg-primary-dark transition-colors text-[#1b180d] px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide items-center justify-center">
+        Konsultasi Sekarang
+    </a>
+</div>
 <!-- Mobile Menu Icon -->
-<div class="lg:hidden text-text-main dark:text-white">
-<span class="material-symbols-outlined cursor-pointer">menu</span>
+<div class="lg:hidden text-text-main dark:text-white ml-2">
+<span class="material-symbols-outlined cursor-pointer" id="mobile-menu-toggle">menu</span>
 </div>
 </div>
 </div>
@@ -685,6 +699,39 @@
                 });
             }
         });
+    });
+
+    // Theme Switcher Logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+    const htmlElement = document.documentElement;
+
+    // Check for saved theme preference or system preference
+    const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    
+    // Apply initial theme
+    if (currentTheme === 'dark') {
+        htmlElement.classList.add('dark');
+        lightIcon.classList.remove('hidden');
+    } else {
+        htmlElement.classList.remove('dark');
+        darkIcon.classList.remove('hidden');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+        // Toggle theme
+        if (htmlElement.classList.contains('dark')) {
+            htmlElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+            lightIcon.classList.add('hidden');
+            darkIcon.classList.remove('hidden');
+        } else {
+            htmlElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            darkIcon.classList.add('hidden');
+            lightIcon.classList.remove('hidden');
+        }
     });
 
     // Testimonial Dots Update
